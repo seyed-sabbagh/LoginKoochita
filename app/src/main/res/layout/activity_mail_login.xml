@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PhoneLoginActivity">
+    tools:context=".phone.PhoneSignUp">
 
 
     <ImageView
@@ -58,7 +58,7 @@
 
 
     <EditText
-        android:id="@+id/edt_input"
+        android:id="@+id/edt_input_number"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -84,7 +84,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton2"
+            android:id="@+id/mbtn_under"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -94,7 +94,7 @@
             app:cornerRadius="5dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnaaqwe"
+            android:id="@+id/mbtnupon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
@@ -117,7 +117,7 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_input" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_input_number" />
 
     <ImageView
         android:id="@+id/imageView4"

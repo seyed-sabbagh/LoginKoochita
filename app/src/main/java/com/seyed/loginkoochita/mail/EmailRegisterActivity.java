@@ -1,9 +1,11 @@
-package com.seyed.loginkoochita;
+package com.seyed.loginkoochita.mail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+
+import com.seyed.loginkoochita.R;
 
 public class EmailRegisterActivity extends AppCompatActivity {
 

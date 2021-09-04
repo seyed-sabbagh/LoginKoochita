@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/img_ic_close"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_margin="10dp"
@@ -26,10 +26,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="2dp"
         android:background="@drawable/bac_main"
-        android:backgroundTint="#F19090"
+        android:backgroundTint="#4DC7BC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/img_ic_close" />
 
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:fontFamily="@font/iransans"
-        android:text="ثبت نام/ورود با ایمیل"
+        android:text="ثبت نام/ ورود با تلفن همراه"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -55,17 +55,18 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/firstPinView"
-        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
+        app:layout_constraintEnd_toEndOf="@+id/picview_phone_activate"
+        app:layout_constraintTop_toBottomOf="@+id/picview_phone_activate" />
 
     <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/iransans"
-        android:text="کد چهار رقمی به ایمیلتان ارسال گردیده است."
+        android:text="کد چهار رقمی به تلفن همراهتان ارسال گردیده است."
         android:textColor="@color/white"
         android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="@+id/firstPinView"
+        app:layout_constraintEnd_toEndOf="@+id/picview_phone_activate"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageView
@@ -73,13 +74,13 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/ic_mail"
+        android:background="@drawable/ic_phone"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <com.chaos.view.PinView
-        android:id="@+id/firstPinView"
+        android:id="@+id/picview_phone_activate"
         style="@style/PinWidget.PinView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,7 +96,7 @@
         app:cursorColor="@color/black"
         app:cursorWidth="2dp"
         app:hideLineWhenFilled="true"
-        app:itemCount="4"
+        app:itemCount="5"
         app:itemHeight="50dp"
         app:itemRadius="4dp"
         app:itemSpacing="10dp"
@@ -106,36 +107,9 @@
         app:lineWidth="1dp"
         app:viewType="rectangle" />
 
-    <RelativeLayout
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/mbtn_under"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#E38686"
-            android:drawableLeft="@drawable/ic_close"
-            app:cornerRadius="5dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/mbtnupon"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#FF0000"
-            android:fontFamily="@font/iransans"
-            android:text="شماره تلفن همراه معتبر نیست"
-            android:textSize="10sp"
-            app:cornerRadius="5dp" />
-    </RelativeLayout>
 
     <Button
-        android:id="@+id/btn_submit"
+        android:id="@+id/btn_submit_phone_activate"
         android:layout_width="100dp"
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
@@ -147,33 +121,118 @@
         android:textSize="15sp"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
+        app:layout_constraintTop_toBottomOf="@+id/picview_phone_activate" />
+
+    <TextView
+        android:id="@+id/txt_dont_send_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="@font/iransans"
+        android:text="آیا هنوز پیامک را دریافت نکرده اید؟"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_submit_phone_activate"
+        app:layout_constraintStart_toEndOf="@+id/linear_resend"
+        app:layout_constraintTop_toTopOf="@+id/btn_submit_phone_activate" />
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:id="@+id/linear_resend"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
         android:background="#720D19"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_submit"
-        app:layout_constraintEnd_toEndOf="@+id/btn_submit"
-        app:layout_constraintStart_toStartOf="@+id/btn_submit"
-        app:layout_constraintTop_toTopOf="@+id/btn_submit">
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_submit_phone_activate"
+        app:layout_constraintEnd_toEndOf="@+id/btn_submit_phone_activate"
+        app:layout_constraintStart_toStartOf="@+id/btn_submit_phone_activate"
+        app:layout_constraintTop_toTopOf="@+id/btn_submit_phone_activate"
+        android:focusable="true">
 
+        <ir.samanjafari.easycountdowntimer.EasyCountDownTextview
+            android:id="@+id/easyCountDownTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            app:colonColor="@color/white"
+            app:days="1"
+            app:daysLabel="D"
+            app:digitBackground="@android:color/transparent"
+            app:hours="0"
+            app:layout_constraintBottom_toBottomOf="@+id/materialButton2"
+            app:layout_constraintEnd_toEndOf="@+id/materialButton2"
+            app:layout_constraintStart_toStartOf="@+id/materialButton2"
+            app:layout_constraintTop_toTopOf="@+id/materialButton2"
+            app:minute="1"
+            app:second="10"
+            app:setAnimation="true"
+            app:showDays="false"
+            app:showHours="false"
+            app:start_automatically="false"
+            app:textColor="@color/white"
+            app:textSize="16sp"
+            app:useFarsiNumeral="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/iransans"
+            android:gravity="center"
+            android:text="ارسال مجدد"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
 
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_error_phone_activate"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbtn_under_phone_activate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#E38686"
+            android:drawableLeft="@drawable/ic_close"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbtnupon_phone_activate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#FF0000"
+            android:fontFamily="@font/iransans"
+            android:lines="1"
+            android:text="کد وارد شده معتبر نیست"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="75dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_pic"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_phone_activate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/group2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView2"
@@ -181,7 +240,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/iransans"
-        android:text=" :):):):):):) سلام"
+        android:text=" آیا شما خودتان هستید"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -189,14 +248,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="364dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

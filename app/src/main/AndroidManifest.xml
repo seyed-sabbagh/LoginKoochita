@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.seyed.loginkoochita">
-<uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LoginKoochita">
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.LoginKoochita"
+        tools:targetApi="m">
         <activity
-            android:name=".EmailUserNameActivity"
+            android:name=".phone.PhoneSetUserName"
             android:exported="true" />
         <activity
-            android:name=".EmailRegisterActivity"
+            android:name=".mail.EmailUserNameActivity"
             android:exported="true" />
         <activity
-            android:name=".MobileRegisterActivity"
-            android:exported="true"></activity>
+            android:name=".mail.EmailRegisterActivity"
+            android:exported="true" />
         <activity
-            android:name=".PhoneLoginActivity"
-            android:exported="true" >
+            android:name=".phone.PhoneActivate"
+            android:exported="true" />
+        <activity
+            android:name=".phone.PhoneSignUp"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".mail.MailLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MailLoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
 
         </activity>
     </application>

@@ -1,4 +1,4 @@
-package com.seyed.loginkoochita;
+package com.seyed.loginkoochita.mail;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.seyed.loginkoochita.R;
 
 public class MailLoginActivity extends AppCompatActivity {
 

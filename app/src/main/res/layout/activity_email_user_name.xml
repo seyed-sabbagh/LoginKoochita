@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PhoneLoginActivity">
+    tools:context=".phone.PhoneSignUp">
 
 
     <ImageView
@@ -85,7 +85,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton2"
+            android:id="@+id/mbtn_under"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -95,7 +95,7 @@
             app:cornerRadius="5dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnaaqwe"
+            android:id="@+id/mbtnupon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"

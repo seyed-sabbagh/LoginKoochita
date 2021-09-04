@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LoginKoochita</string>
+    <string name="ghavanin">شما با ادامه ثبت نام در کوچیتا موافقت خود را با قوانین و مقررات آن اعلام نموده اید</string>
+    <string name="ghavanin2">همیشه می توانید از بخش قوانین و مقررات در جریان محتوا و یا بروزرسانی های آن باشید.</string>
 </resources>

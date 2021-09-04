@@ -3,11 +3,12 @@ package com.seyed.loginkoochita;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
+import com.seyed.loginkoochita.mail.MailLoginActivity;
+import com.seyed.loginkoochita.phone.PhoneSignUp;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(MainActivity.this, PhoneLoginActivity.class);
+                Intent intent2 = new Intent(MainActivity.this, PhoneSignUp.class);
                 startActivity(intent2);
             }
         });

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PhoneLoginActivity">
+    tools:context=".phone.PhoneSignUp"
+    tools:ignore="ExtraText">
 
 
     <ImageView
@@ -16,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="#720D19" />
-
 
     <ImageView
         android:id="@+id/imageView2"
@@ -46,77 +46,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/iransans"
+        android:text="دوستانتان شما را با این نام در سایت خواهند شناخت"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edt_input_usename_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/edt_input_usename_mobile" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/ic_phone"
+        android:background="@drawable/ic_mail"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="@+id/textView3" />
 
-
     <EditText
-        android:id="@+id/edt_input"
+        android:id="@+id/edt_input_usename_mobile"
         android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="10dp"
         android:background="@color/white"
-        android:backgroundTint="@null"
         android:fontFamily="@font/iransans"
-        android:hint="تلفن همراه را وارد کنید"
-        android:inputType="number"
-        android:maxLength="11"
-        android:paddingEnd="10dp"
-        android:textAlignment="viewEnd"
-        android:textColorHint="@color/black"
-        android:textSize="15sp"
+        android:hint="نام کاربری "
+        android:paddingEnd="7dp"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <RelativeLayout
-        android:layout_margin="10dp"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="#E38686"
-            android:drawableLeft="@drawable/ic_close"
-            app:cornerRadius="5dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnaaqwe"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="شماره تلفن همراه معتبر نیست"
-            android:lines="1"
-            android:backgroundTint="#FF0000"
-            android:fontFamily="@font/iransans"
-            android:textSize="10sp"
-            app:cornerRadius="5dp" />
-    </RelativeLayout>
 
     <Button
-        android:id="@+id/btn_submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_submit_phone_username"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
         android:backgroundTint="#FBC155"
         android:fontFamily="@font/iransans"
         android:text="تایید"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_input" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
 
     <ImageView
         android:id="@+id/imageView4"
@@ -124,8 +104,8 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="75dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_pic"
+        android:scaleType="centerInside"
+        android:src="@drawable/koochita_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/iransans"
-        android:text=" :):):):):):) سلام"
+        android:text="من کوچیتا هستم. شما؟"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -154,5 +134,35 @@
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/iransans"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/ghavanin"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_submit_phone_username"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iransans"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/ghavanin2"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_submit_phone_username"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
