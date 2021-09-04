@@ -16,7 +16,7 @@ public class MailLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_login);
 
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.btn_submit);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

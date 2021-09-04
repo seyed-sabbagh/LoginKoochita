@@ -21,7 +21,7 @@ public class MobileRegisterActivity extends AppCompatActivity {
 
         final PinView pinView = findViewById(R.id.firstPinView);
 
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.btn_submit);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

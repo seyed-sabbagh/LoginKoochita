@@ -58,7 +58,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edt_input"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -78,8 +78,9 @@
         tools:ignore="RtlSymmetry" />
 
     <RelativeLayout
+        android:layout_margin="10dp"
         android:layout_width="250dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2">
 
@@ -87,8 +88,6 @@
             android:id="@+id/materialButton2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"
             android:backgroundTint="#E38686"
             android:drawableLeft="@drawable/ic_close"
             app:cornerRadius="5dp" />
@@ -97,16 +96,16 @@
             android:id="@+id/btnaaqwe"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
+            android:text="شماره تلفن همراه معتبر نیست"
+            android:lines="1"
             android:backgroundTint="#FF0000"
             android:fontFamily="@font/iransans"
-            android:text="شماره تلفن همراه معتبر نیست"
             android:textSize="10sp"
             app:cornerRadius="5dp" />
     </RelativeLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -117,7 +116,7 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_input" />
 
     <ImageView
         android:id="@+id/imageView4"
